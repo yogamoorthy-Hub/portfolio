@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Yogamoorthy's developer portfolio" />
+  <title>Yogamoorthy's Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --background-color: #ffffff;
+      --text-color: #333;
+      --accent-color: #f1f1f1;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--primary-color);
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: var(--accent-color);
+    }
+
+    .hero-text {
+      max-width: 500px;
+      padding: 1rem;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #6c63ff;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about, .projects, .contact {
+      background-color: var(--background-color);
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #6c63ff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .project {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      background: var(--accent-color);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 500px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
+
+    .contact button {
+      padding: 0.75rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #574fd6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-image img, .about-image img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yogamoorthy</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, I'm Yogamoorthy</h2>
+      <p>I'm a passionate web developer who loves building clean and responsive websites.</p>
+    </div>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Yogamoorthy's Profile Picture">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="profile.jpg" alt="Yogamoorthy Smiling Near Railing">
+      </div>
+      <div class="about-text">
+        <p>
+          I'm Yogamoorthy, a developer passionate about modern technologies, creative problem-solving, and continuous learning.
+          I enjoy bringing ideas to life in the browser and always aim for clean, efficient, and accessible solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Personal responsive portfolio built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>Simple weather app using OpenWeatherMap API and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yogamoorthy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
